@@ -1,0 +1,43 @@
+{
+	"lineEnds": {
+		"leftCurly": "after",
+		"rightCurly": "after",
+		"emptyCurly": "noBreak",
+		"objectLiteralCurly": {
+			"leftCurly": "after"
+		}
+	},
+	"wrapping": {
+		"anonFunctionSignature": {
+			"defaultWrap": "noWrap"
+		},
+		"callParameter": {
+			"defaultWrap": "keep"
+		},
+		"opAddSubChain": {
+			"defaultWrap": "noWrap"
+		},
+		"anonType": {
+			"defaultWrap": "noWrap"
+		},
+		"arrayMatrixWrap": "matrixWrapWithAlign",
+		"functionSignature": {
+			"defaultWrap": "noWrap"
+		},
+		"opBoolChain": {
+			"defaultWrap": "noWrap"
+		},
+		"maxLineLength": 10000
+	},
+	"sameLine": {
+		"ifBody": "next",
+		"ifElse": "same",
+		"elseBody": "next",
+		"doWhile": "same",
+		"caseBody": "same",
+		"functionBody": "next",
+		"anonFunctionBody": "same",
+		"tryBody": "same",
+		"tryCatch": "same"
+	}
+}
