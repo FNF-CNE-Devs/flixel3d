@@ -1,1 +1,4 @@
-samples/bin
+samples/export
+samples/export/*
+samples/.haxelib
+samples/.haxelib/*

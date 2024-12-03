@@ -2,7 +2,7 @@ package flixel3d;
 
 import flixel.FlxSprite;
 import flixel.FlxBasic;
-import flixel.utils.typeLimit.OneOfTwo;
+import flixel.util.typeLimit.OneOfTwo;
 
 /**
  * This is sprite which renders a single 3d model,
