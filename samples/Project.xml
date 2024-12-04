@@ -43,6 +43,11 @@
 
 	<haxedef name="no-deprecation-warnings" />
 
+	<haxedef name="HXCPP_CHECK_POINTER" />
+	<haxedef name="HXCPP_STACK_LINE" />
+	<haxedef name="HXCPP_DEBUG_LINK" />
+	<haxedef name="HXCPP_CATCH_SEGV" />
+
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
