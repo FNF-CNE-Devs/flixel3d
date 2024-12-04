@@ -6,6 +6,8 @@ package flixel3d.loaders;
  * Spec: https://www.martinreddy.net/gfx/3d/OBJ.spec
  * Spec: https://www.fileformat.info/format/material/
 **/
-class ObjLoader {
-	public function new() {}
+class ObjLoader extends BaseLoader {
+	public function new() {
+		super("obj");
+	}
 }

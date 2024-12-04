@@ -5,6 +5,9 @@ import flixel.FlxSprite;
 import flixel.math.FlxVelocity;
 import flixel.util.typeLimit.OneOfTwo;
 import flixel3d.math.FlxPoint3D;
+import flixel3d.loaders.BaseLoader;
+import flixel3d.loaders.FbxLoader;
+import flixel3d.loaders.ObjLoader;
 
 /**
  * This is sprite which renders a single 3d model,
@@ -16,16 +19,19 @@ import flixel3d.math.FlxPoint3D;
 class FlxModel extends FlxSprite {
 	public var z:Float;
 
-	public var angularVelocity3D:FlxPoint3D;
-	public var angularMaxVelocity3D:FlxPoint3D;
-	public var angularAcceleration3D:FlxPoint3D;
-	public var angularDrag3D:FlxPoint3D;
+	// Angular velocity
+	public var angularVelocity3D:FlxPoint3D = new FlxPoint3D();
+	public var angularMaxVelocity3D:FlxPoint3D = new FlxPoint3D();
+	public var angularAcceleration3D:FlxPoint3D = new FlxPoint3D();
+	public var angularDrag3D:FlxPoint3D = new FlxPoint3D();
 
-	public var velocity3D:FlxPoint3D;
-	public var maxVelocity3D:FlxPoint3D;
-	public var acceleration3D:FlxPoint3D;
-	public var drag3D:FlxPoint3D;
+	// Normal velocity
+	public var velocity3D:FlxPoint3D = new FlxPoint3D();
+	public var maxVelocity3D:FlxPoint3D = new FlxPoint3D();
+	public var acceleration3D:FlxPoint3D = new FlxPoint3D();
+	public var drag3D:FlxPoint3D = new FlxPoint3D();
 
+	// Angle
 	public var angleX:Float;
 	public var angleY:Float;
 	public var angleZ:Float;
@@ -35,15 +41,25 @@ class FlxModel extends FlxSprite {
 		this.z = z;
 	}
 
-	/**
-	 * Data can be either a path or a haxe.io.Bytes class of the data
-	**/
-	public function loadFbxModel(data:OneOfTwo<String, haxe.io.Bytes>) {}
+	public var loader:BaseLoader;
 
 	/**
 	 * Data can be either a path or a haxe.io.Bytes class of the data
 	**/
-	public function loadObjModel(data:OneOfTwo<String, haxe.io.Bytes>) {}
+	public function loadFbxModel(data:OneOfTwo<String, haxe.io.Bytes>) {
+		loader = new FbxLoader();
+		loader.load(data);
+		// TODO: used the parsed data
+	}
+
+	/**
+	 * Data can be either a path or a haxe.io.Bytes class of the data
+	**/
+	public function loadObjModel(data:OneOfTwo<String, haxe.io.Bytes>) {
+		loader = new ObjLoader();
+		loader.load(data);
+		// TODO: used the parsed data
+	}
 
 	public override function update(elapsed:Float) {
 		super.update(elapsed);

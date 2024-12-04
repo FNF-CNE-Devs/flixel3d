@@ -5,6 +5,8 @@ package flixel3d.loaders;
  *
  * Spec: https://docs.fileformat.com/3d/fbx/
 **/
-class FbxLoader {
-	public function new() {}
+class FbxLoader extends BaseLoader {
+	public function new() {
+		super("fbx");
+	}
 }
